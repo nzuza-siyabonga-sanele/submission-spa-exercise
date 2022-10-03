@@ -17,11 +17,11 @@ public class AntonymTests extends WebTestRunner {
 
     @Test
     @DisplayName("lookup a word")
-    @Disabled
+//    @Disabled
     void lookupHasEverything() {
         session.open(new MainPage(AntonymTests.this))
                 .shouldBeOnMainPage()
-                .clickOnSynonymsMenu()
+                .clickOnAntonymsMenu()
                 .lookupWord("hard")
                 .shouldHaveWord("hard")
                 .shouldHaveRelatedWords();

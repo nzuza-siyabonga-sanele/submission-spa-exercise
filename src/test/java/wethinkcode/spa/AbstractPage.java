@@ -42,9 +42,10 @@ public abstract class AbstractPage {
         testRunner.driver().findElement(element).click();
     }
 
-    public void submit() {
+    public boolean submit() {
         WebElement button = testRunner.driver().findElement(By.xpath("//input[@type='submit']"));
         button.submit();
+        return false;
     }
 
     public String textOf(By locator) {
